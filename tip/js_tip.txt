@@ -98,3 +98,18 @@ JS 기초
 4. Callback 함수
 	* 함수 내부에 선언하는 함수
 		ex) $('#id').on('click', function() { ... } ) -> 'click' 옆에 있는 함수가 callback 함수이다
+
+5. function
+	* 변수로 선언된 함수는 호이스팅 대상이 아니다
+		ex) var test = function() { ... }; 과 같이 선언된 함수
+	* arrow function
+		ex) const test = () => { ... }
+			* 매개변수가 하나만 들어갈 시 괄호 생략 가능
+				ex) const test = parameter => { ... }
+			* 실행문이 한 줄일 경우 브라켓 생략 가능
+				ex) const test = parameter => console.log(parameter)
+		* arrow function에서는 this를 사용할 수 없다
+			* event를 변수로 받아 event.target을 사용해주어야 한다
+
+6. Event
+	* addEventListener(<event>, <function>)의 경우, function에 function으로 사용하지 않고 function() 까지 사용할 경우 이벤트가 발생하기도 전에 이벤트가 발생해버린다.
