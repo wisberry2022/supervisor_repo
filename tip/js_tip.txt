@@ -113,3 +113,16 @@ JS 기초
 
 6. Event
 	* addEventListener(<event>, <function>)의 경우, function에 function으로 사용하지 않고 function() 까지 사용할 경우 이벤트가 발생하기도 전에 이벤트가 발생해버린다.
+	* HTML 문서 내 id는 script 내에서 바로 선택이 가능하다(document.querySelector와 같은 명령어를 사용하지 않아도 됨)
+		-> 하지만 권장하지 않음
+7. Object
+	* 선언 방법
+		1. var person = new Object();
+		2. var person = { ... };
+		3. function Person(parameter1, parameter2) { ... } -> var person1 = new Person(a, b);
+	* ... (spread operator)를 사용하면 여러개를 선언한 객체 중 중복되는 property를 간략하게 작성할 수 있다.
+		ex) const animal = {leg: 4, type: 'anima',} -> const cow = { ...animal, sound:'ummah',}
+	* js의 비구조할당
+		-> 선언된 객체의 property들을 차후 별개의 변수로 나누어 저장할 수 있다
+			ex) const obj = { name: 'exam', age: 15 }; -> const { name, age } = obj;
+		-> 비구조할당을 활용하여 변수를 선언/할당 할 때에는 중괄호( { } )를 반드시 쳐야한다
