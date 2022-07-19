@@ -4,3 +4,6 @@
 [submodule "js_train"]
 	path = js_train
 	url = https://github.com/wisberry2022/js_train.git
+[submodule "web_practice"]
+	path = web_practice
+	url = https://github.com/wisberry2022/web_practic.git
